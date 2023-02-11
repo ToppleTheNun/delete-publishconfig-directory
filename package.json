@@ -1,6 +1,6 @@
 {
   "name": "delete-publishconfig-directory",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Deletes the directory field from publishConfig.",
   "author": "Richard Harrah",
   "license": "MIT",
