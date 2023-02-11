@@ -93,6 +93,11 @@ jobs:
           # This makes Actions fetch all Git history so that release-it can generate changelogs with the correct commits
           fetch-depth: 0
 
+      - name: ⚙️ Set Git user
+        run: |
+          git config user.name "${GITHUB_ACTOR}"
+          git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
+
       - name: 📥 Install Dependencies via pnpm
         uses: ToppleTheNun/action-pnpm-install@v1
 
