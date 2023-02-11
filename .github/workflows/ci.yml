@@ -72,6 +72,9 @@ jobs:
       - name: 📥 Install Dependencies via pnpm
         uses: ToppleTheNun/action-pnpm-install@v1
 
+      - name: 🏠 Run build
+        run: pnpm run build
+
       - name: ⚖️ Run size
         run: pnpm run size
 
