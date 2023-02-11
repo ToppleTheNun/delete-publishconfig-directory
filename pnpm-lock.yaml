@@ -18,6 +18,7 @@ specifiers:
   release-it: ^15.6.0
   rimraf: ^4.1.2
   size-limit: ^8.1.2
+  size-limit-preset-node-lib: ^0.2.0
   tsup: ^6.6.0
   typescript: ^4.9.5
 
@@ -39,6 +40,7 @@ devDependencies:
   release-it: 15.6.0
   rimraf: 4.1.2
   size-limit: 8.1.2
+  size-limit-preset-node-lib: 0.2.0_size-limit@8.1.2
   tsup: 6.6.0_typescript@4.9.5
   typescript: 4.9.5
 
@@ -5535,6 +5537,34 @@ packages:
       {
         integrity: sha512-wnD2ZE+l+SPC/uoS0vXeE9L1+0wuaMqKlfz9AMUo38JsyLSBWSFcHR1Rri62LZc12vLr1gb3jl7iwQhgwpAbGQ==,
       }
+    dev: true
+
+  /size-limit-node-esbuild/0.2.0_size-limit@8.1.2:
+    resolution:
+      {
+        integrity: sha512-iiIfHBH/+ZxgsE7YVQDEejAUGZYEu4QIai/QNZloEGxA+cmow79O8uGdu4sK64V8kafryqR1grK7nl7xIGv6rw==,
+      }
+    engines: { node: ^12.20.0 || ^14.18.0 || >=16.0.0 }
+    dependencies:
+      "@size-limit/esbuild": 8.1.2_size-limit@8.1.2
+      nanoid: 3.3.4
+      tslib: 2.5.0
+    transitivePeerDependencies:
+      - size-limit
+    dev: true
+
+  /size-limit-preset-node-lib/0.2.0_size-limit@8.1.2:
+    resolution:
+      {
+        integrity: sha512-qWfiB6VPcxgyCZq85WhnIC5D5fjLz82pKo0ehmxJYi0oqLNvYouSquDcMF5mEG7Rh+Qwl3lKG9yjKl9omFALbg==,
+      }
+    engines: { node: ^12.20.0 || ^14.18.0 || >=16.0.0 }
+    dependencies:
+      "@size-limit/file": 8.1.2_size-limit@8.1.2
+      size-limit-node-esbuild: 0.2.0_size-limit@8.1.2
+      tslib: 2.5.0
+    transitivePeerDependencies:
+      - size-limit
     dev: true
 
   /size-limit/8.1.2:

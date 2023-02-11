@@ -36,7 +36,6 @@
   },
   "devDependencies": {
     "@release-it/conventional-changelog": "^5.1.1",
-    "@size-limit/preset-small-lib": "^8.1.2",
     "@tsconfig/node-lts-strictest": "^18.12.1",
     "@types/node": "^18.13.0",
     "@typescript-eslint/eslint-plugin": "^5.51.0",
@@ -52,6 +51,7 @@
     "release-it": "^15.6.0",
     "rimraf": "^4.1.2",
     "size-limit": "^8.1.2",
+    "size-limit-preset-node-lib": "^0.2.0",
     "tsup": "^6.6.0",
     "typescript": "^4.9.5"
   },

@@ -7,4 +7,5 @@ export default defineConfig((overrideOptions) => ({
   clean: !overrideOptions.watch,
   dts: true,
   format: ["cjs", "esm"],
+  platform: "node",
 }));
