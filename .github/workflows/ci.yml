@@ -1,0 +1,100 @@
+name: 🔄 CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request: {}
+
+permissions:
+  actions: write
+  contents: write
+
+jobs:
+  lint:
+    name: ⬣ ESLint
+    runs-on: ubuntu-latest
+    steps:
+      - name: 🛑 Cancel Previous Runs
+        uses: styfle/cancel-workflow-action@0.11.0
+
+      - name: ⬇️ Checkout repo
+        uses: actions/checkout@v3
+
+      - name: 📥 Install Dependencies via pnpm
+        uses: ToppleTheNun/action-pnpm-install@v1
+
+      - name: 🔬 Lint
+        run: pnpm run lint
+
+  build:
+    name: 🔨 Build
+    runs-on: ubuntu-latest
+    steps:
+      - name: 🛑 Cancel Previous Runs
+        uses: styfle/cancel-workflow-action@0.11.0
+
+      - name: ⬇️ Checkout repo
+        uses: actions/checkout@v3
+
+      - name: 📥 Install Dependencies via pnpm
+        uses: ToppleTheNun/action-pnpm-install@v1
+
+      - name: 🏠 Run build
+        run: pnpm run build
+
+  prettier:
+    name: 🔎 Prettier
+    runs-on: ubuntu-latest
+    steps:
+      - name: 🛑 Cancel Previous Runs
+        uses: styfle/cancel-workflow-action@0.11.0
+
+      - name: ⬇️ Checkout repo
+        uses: actions/checkout@v3
+
+      - name: 📥 Install Dependencies via pnpm
+        uses: ToppleTheNun/action-pnpm-install@v1
+
+      - name: ❤️ Run format:check
+        run: pnpm run format:check
+
+  size:
+    name: 📏 Size Limit
+    runs-on: ubuntu-latest
+    steps:
+      - name: 🛑 Cancel Previous Runs
+        uses: styfle/cancel-workflow-action@0.11.0
+
+      - name: ⬇️ Checkout repo
+        uses: actions/checkout@v3
+
+      - name: 📥 Install Dependencies via pnpm
+        uses: ToppleTheNun/action-pnpm-install@v1
+
+      - name: ⚖️ Run size
+        run: pnpm run size
+
+  release:
+    name: 🚀 Release
+    runs-on: ubuntu-latest
+    needs: [lint, prettier, size, build]
+    if: ${{ github.ref == 'refs/heads/main' && github.event_name == 'push' }}
+    steps:
+      - name: 🛑 Cancel Previous Runs
+        uses: styfle/cancel-workflow-action@0.11.0
+
+      - name: ⬇️ Checkout repo
+        uses: actions/checkout@v3
+        with:
+          # This makes Actions fetch all Git history so that release-it can generate changelogs with the correct commits
+          fetch-depth: 0
+
+      - name: 📥 Install Dependencies via pnpm
+        uses: ToppleTheNun/action-pnpm-install@v1
+
+      - name: 🚀 Release It
+        run: pnpm run release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.NODE_AUTH_TOKEN }}
