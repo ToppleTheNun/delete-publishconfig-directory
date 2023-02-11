@@ -2,7 +2,6 @@ lockfileVersion: 5.4
 
 specifiers:
   "@release-it/conventional-changelog": ^5.1.1
-  "@size-limit/preset-small-lib": ^8.1.2
   "@tsconfig/node-lts-strictest": ^18.12.1
   "@types/node": ^18.13.0
   "@typescript-eslint/eslint-plugin": ^5.51.0
@@ -24,7 +23,6 @@ specifiers:
 
 devDependencies:
   "@release-it/conventional-changelog": 5.1.1_release-it@15.6.0
-  "@size-limit/preset-small-lib": 8.1.2_size-limit@8.1.2
   "@tsconfig/node-lts-strictest": 18.12.1
   "@types/node": 18.13.0
   "@typescript-eslint/eslint-plugin": 5.51.0_z4swst3wuuqk4hlme4ajzslgh4
@@ -670,19 +668,6 @@ packages:
       size-limit: 8.1.2
     dependencies:
       semver: 7.3.8
-      size-limit: 8.1.2
-    dev: true
-
-  /@size-limit/preset-small-lib/8.1.2_size-limit@8.1.2:
-    resolution:
-      {
-        integrity: sha512-KfczbDq+4qFUXVMdNJlIZycp1WY1aqSfHfz4nRZNVaSxBSixrgBYkV6/M+qwP2axNFIXGzIMolqbTCUxvqikyQ==,
-      }
-    peerDependencies:
-      size-limit: 8.1.2
-    dependencies:
-      "@size-limit/esbuild": 8.1.2_size-limit@8.1.2
-      "@size-limit/file": 8.1.2_size-limit@8.1.2
       size-limit: 8.1.2
     dev: true
 
