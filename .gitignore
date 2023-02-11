@@ -371,3 +371,4 @@ $RECYCLE.BIN/
 megalinter-reports/
 
 .eslintcache
+.npmrc

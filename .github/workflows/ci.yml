@@ -96,8 +96,12 @@ jobs:
       - name: 📥 Install Dependencies via pnpm
         uses: ToppleTheNun/action-pnpm-install@v1
 
+      - name: 💿 Save npm credentials
+        run: npm config set //registry.npmjs.org/:_authToken $NODE_AUTH_TOKEN
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NODE_AUTH_TOKEN }}
+
       - name: 🚀 Release It
         run: pnpm run release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NODE_AUTH_TOKEN: ${{ secrets.NODE_AUTH_TOKEN }}
