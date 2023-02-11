@@ -5,6 +5,9 @@
   "author": "Richard Harrah",
   "license": "MIT",
   "packageManager": "pnpm@7.25.1",
+  "engines": {
+    "node": "^14 || ^16 || >=18"
+  },
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",

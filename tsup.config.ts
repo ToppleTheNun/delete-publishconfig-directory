@@ -8,4 +8,5 @@ export default defineConfig((overrideOptions) => ({
   dts: true,
   format: ["cjs", "esm"],
   platform: "node",
+  target: "node14",
 }));
