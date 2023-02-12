@@ -1,0 +1,5 @@
+{
+  "extends": ["config:js-lib", "npm:unpublishSafe", "group:allNonMajor"],
+  "prCreation": "not-pending",
+  "semanticCommits": "enabled"
+}
