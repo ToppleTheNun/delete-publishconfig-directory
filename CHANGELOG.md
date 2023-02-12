@@ -1,3 +1,13 @@
+
+
+### [0.3.1](https://github.com/ToppleTheNun/delete-publishconfig-directory/compare/0.3.0...0.3.1) (2023-02-12)
+
+
+### Bug Fixes
+
+* build before publishing ([c4dec66](https://github.com/ToppleTheNun/delete-publishconfig-directory/commit/c4dec66d3f602fb284c60535fc9fec5b7cf00fc9))
+* run format before git release ([d286b94](https://github.com/ToppleTheNun/delete-publishconfig-directory/commit/d286b94a2157340cf155d967ec571be91ebcf24e))
+
 ## [0.3.0](https://github.com/ToppleTheNun/delete-publishconfig-directory/compare/0.2.0...0.3.0) (2023-02-12)
 
 ### Features
