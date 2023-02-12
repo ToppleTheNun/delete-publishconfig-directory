@@ -78,6 +78,9 @@
     "github": {
       "release": true
     },
+    "hooks": {
+      "before:init": "pnpm run build"
+    },
     "plugins": {
       "@release-it/conventional-changelog": {
         "preset": "conventionalcommits",
