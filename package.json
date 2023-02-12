@@ -4,10 +4,11 @@
   "description": "Deletes the directory field from publishConfig.",
   "author": "Richard Harrah",
   "license": "MIT",
-  "packageManager": "pnpm@7.25.1",
+  "packageManager": "pnpm@7.27.0",
   "engines": {
     "node": "^14 || ^16 || >=18"
   },
+  "bin": "./bin/delete-publishconfig-directory.js",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
