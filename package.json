@@ -39,7 +39,7 @@
     "size": "size-limit"
   },
   "devDependencies": {
-    "@release-it/conventional-changelog": "^5.1.1",
+    "@release-it/conventional-changelog": "^8.0.0",
     "@tsconfig/node-lts-strictest": "^18.12.1",
     "@types/node": "^18.13.0",
     "@typescript-eslint/eslint-plugin": "^5.51.0",
