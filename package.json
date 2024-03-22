@@ -4,7 +4,7 @@
   "description": "Deletes the directory field from publishConfig.",
   "author": "Richard Harrah",
   "license": "MIT",
-  "packageManager": "pnpm@7.27.0",
+  "packageManager": "pnpm@8.15.5",
   "engines": {
     "node": "^14 || ^16 || >=18"
   },
